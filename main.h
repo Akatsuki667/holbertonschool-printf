@@ -12,6 +12,7 @@ int _putchar(char c);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
+int print_int(va_list args);
 
 /**
  * struct print - structure associant un format et une fonction de
@@ -19,10 +20,10 @@ int print_percent(va_list args);
  * @type: Le type d'argument
  * @f: La fonction associée pour afficher ce type d'argument
  */
-typedef struct
+typedef struct print
 {
-    char *type;
-    int (*f)(va_list args);
+char *type;
+int (*f)(va_list args);
 } print_type;
 
 #endif
