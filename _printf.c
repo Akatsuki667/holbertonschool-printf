@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+* _printf - print char, string and %
+* @format: types of data to print
+* Return: count of char
+*/
 int _printf(const char *format, ...)
 {
 print_type types[] = {
@@ -8,17 +12,12 @@ print_type types[] = {
 {"%", print_percent},
 {NULL, NULL}
 };
-
 va_list args;
-int count = 0;
-int i = 0;
-int j;
+int count = 0, i = 0, j;
 
 if (format == NULL)
 	return (-1);
-
 va_start(args, format);
-
 while (format != NULL && format[i] != '\0')
 	{
 	if (format[i] == '%' && format[i + 1])
@@ -41,9 +40,7 @@ while (format != NULL && format[i] != '\0')
 				}
 			}
 		else
-		{
 		count += _putchar(format[i]);
-		}
 		i++;
 	}
 va_end(args);
