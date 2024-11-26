@@ -46,7 +46,6 @@ while (format != NULL && format[i] != '\0')
 		}
 		i++;
 	}
-_putchar('\n');
 va_end(args);
 return (count);
 }
