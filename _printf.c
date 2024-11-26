@@ -5,13 +5,17 @@ int _printf(const char *format, ...)
 print_type types[] = {
 {"c", print_char},
 {"s", print_string},
+{"%", print_percent},
 {NULL, NULL}
 };
 
 va_list args;
-/*int count = 0;*/
+int count = 0;
 int i = 0;
 int j;
+
+if (format == NULL)
+	return (-1);
 
 va_start(args, format);
 
@@ -24,14 +28,19 @@ while (format != NULL && format[i] != '\0')
 		{
 		if (*(types[j].type) == format[i])
 			{
-			types[j].f(args);
+			count += types[j].f(args);
 			break;
 			}
 		j++;
 		}
+		if (!types[j].type)
+			{
+			count += _putchar('%');
+			count += _putchar(format[i]);
+			}
 	i++;
 	}
 _putchar('\n');
 va_end(args);
-return (i);
+return (count);
 }
