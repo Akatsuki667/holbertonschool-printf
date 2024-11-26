@@ -9,10 +9,9 @@ int _printf(const char *format, ...);
 
 int _putchar(char c);
 
-void print_char(va_list args);
-void print_string(va_list args);
-void print_int(va_list args);
-void print_int_b10(va_list args);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_percent(va_list args);
 
 /**
  * struct print - structure associant un format et une fonction de
@@ -23,7 +22,7 @@ void print_int_b10(va_list args);
 typedef struct
 {
     char *type;
-    void (*f)(va_list args);
+    int (*f)(va_list args);
 } print_type;
 
 #endif
