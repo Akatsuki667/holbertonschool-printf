@@ -9,23 +9,28 @@ print_type types[] = {
 };
 
 va_list args;
+/*int count = 0;*/
 int i = 0;
-int j = 0;
+int j;
 
 va_start(args, format);
 
 while (format != NULL && format[i] != '\0')
 	{
+	if (format[i] == '%' && format[i + 1])
+	i++;
+	j = 0;
 	while (types[j].type)
 		{
-		if (*types[j].type == format[i])
-		types[j].f(args);
+		if (*(types[j].type) == format[i])
+			{
+			types[j].f(args);
+			break;
+			}
+		j++;
 		}
-	j++;
-	}
-	j = 0;
 	i++;
-
+	}
 _putchar('\n');
 va_end(args);
 return (i);

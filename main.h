@@ -4,6 +4,7 @@
 #include <stdlib.h> /* librairie standard (malloc, free) */
 #include <stdarg.h> /* librairie standard (va_start, va_end, va_arg) */
 #include <unistd.h> /* Accès API OS POSIX */
+#include <stdio.h>
 
 int _printf(const char *format, ...);
 

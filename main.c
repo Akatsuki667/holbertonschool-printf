@@ -9,7 +9,11 @@
  */
 int main(void)
 {
+char c = c;
+char *str = "string";
 
+_printf("%s\n", str);
+_printf("%c\n", c);
 _printf("gros boloss\n");
 printf("gros bolosse\n");
 
