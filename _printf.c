@@ -22,23 +22,29 @@ va_start(args, format);
 while (format != NULL && format[i] != '\0')
 	{
 	if (format[i] == '%' && format[i + 1])
-	i++;
-	j = 0;
-	while (types[j].type)
 		{
-		if (*(types[j].type) == format[i])
+		i++;
+		j = 0;
+		while (types[j].type)
 			{
-			count += types[j].f(args);
-			break;
+			if (*(types[j].type) == format[i])
+				{
+				count += types[j].f(args);
+				break;
+				}
+			j++;
 			}
-		j++;
+			if (!types[j].type)
+				{
+				count += _putchar('%');
+				count += _putchar(format[i]);
+				}
+			}
+		else
+		{
+		count += _putchar(format[i]);
 		}
-		if (!types[j].type)
-			{
-			count += _putchar('%');
-			count += _putchar(format[i]);
-			}
-	i++;
+		i++;
 	}
 _putchar('\n');
 va_end(args);
