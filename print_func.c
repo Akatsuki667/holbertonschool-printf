@@ -52,7 +52,7 @@ unsigned int n_1; /* gestion INT_MIN */
 if (n < 0)
 {
 count += _putchar('-'); /* ajout signe au compteur */
-n_1 = - n; /* conversion en positif */
+n_1 = -n; /* conversion en positif */
 }
 n_1 = n;
 count += print_number(n_1);

@@ -21,8 +21,7 @@ return (-1);
 va_start(args, format); /* initialiser les arguments variadiques */
 while (format[i] != '\0') /* parcourir format index i */
 {
-if (format[i] == '%' && format[i + 1])
-/* vérifier caractère spécial */
+if (format[i] == '%' && format[i + 1])/* vérifier caractère spécial */
 {
 i++; /* passer au caractère suivant */
 j = 0;
