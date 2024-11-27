@@ -5,7 +5,7 @@ This project consist in recreating the standard 'printf' function in the C libra
 The aim is to gain a better understanding of the inner workings of this function and to master advanced programmings concepts, such as variadic arguments.
 
 Key features include support for :
-- **'%c'** : Displays a character
+- **`%c`** : Displays a character
 - **`%s`** : Displays a string of characters.
 - **`%%`** : Displays the `%` symbol.
 - **`%d`** : Displays an integer.

@@ -37,7 +37,8 @@ return (s_count); /* retour nb caractère */
 int print_percent(va_list args)
 {
 (void)args;
-return (_putchar('%'));
+ /* indication explicite compilateur args pas utilisé */
+return (_putchar('%'));/* retour imprimer caractère */
 }
 /**
  * print_int - fonction imprimant des entiers
