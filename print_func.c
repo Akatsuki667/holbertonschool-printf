@@ -13,7 +13,7 @@ return (_putchar(c)); /* imprime le caractère */
 /**
  * print_string - fonction imprimant les caractères
  * @args: argument variadiques
- * Return: imprime les caractères
+ * Return: nb caractères
  */
 int print_string(va_list args)
 {
@@ -32,15 +32,45 @@ return (s_count); /* retour nb caractère */
 /**
  * print_percent - fonction imprimant caractères spéciaux
  * @args: argument variadiques
- * Return: imprime les caractères spéciaux
+ * Return: imprime caractères spéciaux
  */
 int print_percent(va_list args)
 {
 (void)args;
 return (_putchar('%'));
 }
-
+/**
+ * print_int - fonction imprimant des entiers
+ * @args: argument variadiques
+ * Return: nb d'entiers
+ */
 int print_int(va_list args)
 {
-
+int n = va_arg(args, int); /* extraction argument -> stockage arguments */
+int count = 0; /* calcul nb total caractère */
+unsigned int n_1; /* gestion INT_MIN */
+if (n < 0)
+{
+count += _putchar('-'); /* ajout signe au compteur */
+n_1 = - n; /* conversion en positif */
+}
+n_1 = n;
+count += print_number(n_1);
+/* appel fonction afficher n_1 -> ajouter au compteur */
+return (count);
+}
+/**
+ * print_number - fonction récursive auxiliaire
+ * @n: paramètres à calculer
+ * Return: nb de caractère
+ */
+int print_number(unsigned int n)
+{
+int count = 0; /* stockage nb */
+if (n / 10 > 0)
+count += print_number(n / 10); /* appel récursif -> ajouter au compteur */
+count += _putchar((n % 10) + '0');
+/* une fois nb réduit à un seul chiffre -> extraction nb */
+/* conversion en caractère ASCII(+ '0) */
+return (count);
 }

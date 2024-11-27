@@ -10,6 +10,8 @@ print_type types[] = {
 {"c", print_char}, /* association %c à print_char */
 {"s", print_string}, /* association %s à print_string */
 {"%", print_percent}, /* association % à print_percent */
+{"d", print_int},
+{"i", print_int},
 {NULL, NULL} /* fin du tableau */
 };
 int i = 0, j, size = 0;
