@@ -27,7 +27,7 @@ i++; /* passer au caractère suivant */
 j = 0;
 while (types[j].type != NULL) /* parcourir types index j */
 {
-if (*types[j].type == format[i]) /* vérification correspondance*/
+if (*types[j].type == format[i]) /* vérification correspondance */
 {
 size += types[j].f(args); /* appel fonction, ajout à size */
 break; /* sortir de la boucle lorsqu'il y a correspondance */

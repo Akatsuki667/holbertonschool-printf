@@ -49,14 +49,12 @@ int print_int(va_list args)
 {
 int n = va_arg(args, int); /* extraction argument -> stockage arguments */
 int count = 0; /* calcul nb total caractère */
-unsigned int n_1; /* gestion INT_MIN */
 if (n < 0)
 {
 count += _putchar('-'); /* ajout signe au compteur */
-n_1 = -n; /* conversion en positif */
+n = -n; /* conversion en positif */
 }
-n_1 = n;
-count += print_number(n_1);
+count += print_number(n);
 /* appel fonction afficher n_1 -> ajouter au compteur */
 return (count);
 }
