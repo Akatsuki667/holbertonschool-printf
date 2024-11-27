@@ -45,3 +45,44 @@ int print_percent(va_list args)
 return (_putchar('%'));
 }
 
+/**
+* print_int - print an integers
+* @args: argument variadic
+* Return: number of integers
+*/
+
+int print_int(va_list args)
+{
+unsigned int n;
+int count = 0;
+int num = va_arg(args, int);
+
+if (num < 0)
+{
+count += _putchar('-');
+n = -num;
+}
+else
+n = num;
+count += print_number(n);
+return (count);
+}
+
+/**
+* print_number - print numbers one by one recursively using putchar
+* @n: integer from print_int
+* Return: number of integers
+*/
+
+int print_number(unsigned int n)
+{
+int count = 0;
+
+if (n / 10)
+{
+count += print_number(n / 10);
+}
+count += _putchar((n % 10) + '0');
+return (count);
+}
+
