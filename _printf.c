@@ -37,6 +37,7 @@ j++;
 if (!types[j].type) /* aucun type correspondant */
 {
 size += _putchar('%'); /* imprimer carcatère brut */
+size += _putchar(format[i]); /* imprimer caractère suivant */
 }
 }
 else /* caractère ordinaire */
