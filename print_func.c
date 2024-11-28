@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 * print_char - print a character
@@ -23,7 +24,7 @@ int print_string(va_list args)
 int s_count = 0;
 char *s = va_arg(args, char*);
 if (s == NULL)
-	s = "(nil)";
+	s = "(null)";
 
 while (*s)
 	{

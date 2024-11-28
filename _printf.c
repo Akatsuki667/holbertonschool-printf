@@ -40,10 +40,10 @@ while (format != NULL && format[i] != '\0')
 				count += _putchar('%');
 				count += _putchar(format[i]);
 				}
-			}
-		else
-		count += _putchar(format[i]);
-		i++;
+		}
+	else
+	count += _putchar(format[i]);
+	i++;
 	}
 va_end(args);
 return (count);
