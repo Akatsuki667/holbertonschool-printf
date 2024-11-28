@@ -55,7 +55,7 @@ count += _putchar('-'); /* ajout signe au compteur */
 n = -n; /* conversion en positif */
 }
 count += print_number(n);
-/* appel fonction afficher n_1 -> ajouter au compteur */
+/* appel fonction afficher n -> ajouter au compteur */
 return (count);
 }
 /**

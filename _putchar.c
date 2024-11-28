@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main.h"
 /**
  * unistd.h : contient la déclaration fonction write
  * write() : écrire des données dans un fichier ou stdout

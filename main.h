@@ -1,5 +1,5 @@
-#ifndef PRINTF_H
-#define PRINTF_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdlib.h> /* librairie standard (malloc, free) */
 #include <stdarg.h> /* librairie standard (va_start, va_end, va_arg) */
