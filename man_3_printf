@@ -1,0 +1,47 @@
+.TH _PRINTF 3 "November 2024" "Custom Library" "Custom Functions Manual"
+.SH NAME
+_printf - Format and print data to the standard output
+.SH SYNOPSIS
+.nf
+.B #include "main.h"
+.BIint _printf(const char *format, ...);
+.fi
+.SH DESCRIPTION
+The _printf function formats and prints data to the standard output (stdout). 
+It mimics the behavior of the standard printf function but supports a custom 
+set of format specifiers.
+
+Supported format specifiers:
+    %c Print a single character.
+    %s Print a null-terminated string.
+    %% Print a percent.
+    %d Print an integer.	
+    %i Print a decimal integer.
+
+    Parameters:
+    format  A constant character string containing format specifiers and text.
+    ...     A variable number of arguments corresponding to the format specifiers.
+
+Behavior:
+    - The function processes the format string and replaces each specifier with the
+      corresponding argument's formatted value.
+    - Returns the total number of characters written, excluding the null byte.
+.SH RETURN VALUE
+On success, _printf returns the number of characters written (excluding the
+terminating null byte). On failure, it returns a negative value.
+.SH ERRORS
+Errors can occur in the following cases:
+    - If the format string is NULL, the behavior is undefined.
+    - If an unsupported format specifier is used, the behavior is undefined.
+.SH EXAMPLES
+.nf
+#include "main.h"
+
+int main(void)
+{
+    _printf("Hello, %s! The number is %d.\n", "world", 42);
+    return (0);
+}
+.fi
+.SH SEE ALSO
+printf(3), write(2), putchar(3)
