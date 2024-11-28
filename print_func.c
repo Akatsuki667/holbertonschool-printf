@@ -21,7 +21,7 @@ char *s; /* stockage string */
 int s_count = 0; /* compteur nb de caractère */
 s = va_arg(args, char*); /* récupération caractères */
 if (s == NULL) /* vérification caractère valide */
-	s = "(null)"; /* message erreur */
+s = "(null)"; /* message erreur */
 while (*s) /* parcours string */
 {
 s_count += _putchar(*s); /* imprime carcatère -> ajout dans le compteur */
