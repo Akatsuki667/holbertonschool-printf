@@ -1,9 +1,5 @@
 #include "main.h"
-/**
- * unistd.h : contient la déclaration fonction write
- * write() : écrire des données dans un fichier ou stdout
- */
-/* _putchar - description */
+/* _putchar - impression caractère */
 /* reconstruction de la fontion putchar */
 int _putchar(char c)
 {
