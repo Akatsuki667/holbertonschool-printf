@@ -41,7 +41,7 @@ size += _putchar(format[i]); /* imprimer caractère suivant */
 }
 }
 else /* caractère ordinaire */
-size += _putchar(format[i]); /* imprimer caractère */
+size += _putchar(format[i]); /* imprimer caractère, ajout size */
 i++; /* caractère suivant */
 }
 va_end(args); /* libérer ressources */

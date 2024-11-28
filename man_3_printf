@@ -1,4 +1,4 @@
-q.TH _PRINTF 3 "November 2024" "Custom Library" "Custom Functions Manual"
+.TH _PRINTF 3 "November 2024" "Custom Library" "Custom Functions Manual"
 .SH NAME
 _printf - Format and print data to the standard output
 .SH SYNOPSIS
