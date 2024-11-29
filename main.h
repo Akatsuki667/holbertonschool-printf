@@ -13,6 +13,8 @@ int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
 int print_int(va_list args);
+
+int handle_percent(const char *format, int i, va_list args);
 int print_number(unsigned int n);
 
 /**

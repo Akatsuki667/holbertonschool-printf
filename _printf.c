@@ -10,20 +10,18 @@ print_type types[] = {
 {"c", print_char}, /* association %c à print_char */
 {"s", print_string}, /* association %s à print_string */
 {"%", print_percent}, /* association % à print_percent */
-{"d", print_int},
-{"i", print_int},
-{NULL, NULL} /* fin du tableau */
+{"d", print_int}, {"i", print_int}, {NULL, NULL} /* fin du tableau */
 };
 int i = 0, j, size = 0;
 va_list args;
-if (format == NULL) /* vérifier si le format est valide */
-return (-1);
 va_start(args, format); /* initialiser les arguments variadiques */
-while (format[i] != '\0') /* parcourir format index i */
+while (format[i] != '\0' && format != NULL) /* parcourir format index i */
 {
-if (format[i] == '%' && format[i + 1])/* vérifier caractère spécial */
+if (format[i] == '%')/* vérifier caractère spécial */
 {
-i++; /* passer au caractère suivant */
+i = handle_percent(format, i, args);
+if (i == - 1)
+return (-1);
 j = 0;
 while (types[j].type != NULL) /* parcourir types index j */
 {
