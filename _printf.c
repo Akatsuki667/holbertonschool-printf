@@ -14,6 +14,8 @@ print_type types[] = {
 };
 int i = 0, j, size = 0;
 va_list args;
+if (format == NULL)
+return (-1);
 va_start(args, format); /* initialiser les arguments variadiques */
 while (format[i] != '\0' && format != NULL) /* parcourir format index i */
 {
