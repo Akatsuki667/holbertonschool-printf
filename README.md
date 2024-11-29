@@ -17,4 +17,47 @@ Key features include support for :
 - **`main.h`** : Contains function prototypes and definitions required for the project.
 - **`_putchar.c`** : Implements the `_putchar` function for displaying individual characters on standard output.
 
-Thanks for reading, this project is a collaboration with https://github.com/daalagelerua.
+For a better understanding, we provide you with the flowchart section, which contains diagrams corresponding to each file.
+
+## Prerequisites
+-**Compiler** : `gcc` with options `-Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c`
+-**Style** : follows the betty style's code (use `betty-style` and `betty-doc` for the code review)
+
+## Installation
+1. Clone the repository :
+git clone https://github.com/Akatsuki667/holbertonschool-printf.git
+2. Acces to project :
+cd holbertonschool-printf
+3. Compile the source code :
+`gcc` with options `-Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c`
+
+## Examples of use
+Here are some examples of how to use the `_printf` function :
+### 1. Simple text display
+_printf("Hello, World!\n");
+### 1.1 Result
+Hello, World!
+### 2. Displaying charcaters and strings
+_printf("Caractère : %c, Chaîne : %s\n", 'A', "Holberton");
+### 2.1 Result
+Caractère : A, Chaîne : Holberton
+### 3. Displaying signed
+_printf("Entier signé : %d\n", -123);
+### 3.1 Result
+Entier signé : -123
+### 4. Displaying a percentage literal
+_printf("Un pourcentage : %%\n");
+### 4.1 Result
+Un pourcentage : %
+
+## Man page `_printf`
+[man_3_printf](man_3_printf)
+
+## Flowchart
+- **`_printf.c`** : [flowchart _printf.c](https://app.diagrams.net/#HAkatsuki667%2Fholbertonschool-printf%2Fmain%2Fflowchat_printf.drawio#%7B%22pageId%22%3A%227UWGl-7bPe17A0hntDEX%22%7D)
+- **`print_func.c`** :[flowchart print_func.c](https://app.diagrams.net/#HAkatsuki667%2Fholbertonschool-printf%2Fmain%2Fflowchart%20print_func.drawio#%7B%22pageId%22%3A%22lQksJHaqKnuztnZUSCbJ%22%7D)
+
+## Contributors
+This project was produced as part of the Holberton School program by :
+- [Perillat Aurèle](https://github.com/daalagelerua)
+- [Teyant Alexandre](https://github.com/Akatsuki667)

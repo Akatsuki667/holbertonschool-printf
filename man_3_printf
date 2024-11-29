@@ -4,7 +4,7 @@ _printf - Format and print data to the standard output
 .SH SYNOPSIS
 .nf
 .B #include "main.h"
-.BIint _printf(const char *format, ...);
+.B int _printf(const char *format, ...);
 .fi
 .SH DESCRIPTION
 The _printf function formats and prints data to the standard output (stdout). 
