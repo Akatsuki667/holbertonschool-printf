@@ -56,6 +56,8 @@ Un pourcentage : %
 ## Flowchart
 - **`_printf.c`** : [flowchart _printf.c](https://app.diagrams.net/#HAkatsuki667%2Fholbertonschool-printf%2Fmain%2Fflowchat_printf.drawio#%7B%22pageId%22%3A%227UWGl-7bPe17A0hntDEX%22%7D)
 - **`print_func.c`** :[flowchart print_func.c](https://app.diagrams.net/#HAkatsuki667%2Fholbertonschool-printf%2Fmain%2Fflowchart%20print_func.drawio#%7B%22pageId%22%3A%22lQksJHaqKnuztnZUSCbJ%22%7D)
+- **Link between .h and .c files** : [flowchart link .h and .c](https://app.diagrams.net/#HAkatsuki667%2Fholbertonschool-printf%2Fmain%2Flien%20entre%20les%20fichiers%20c%20et%20h.drawio#%7B%22pageId%22%3A%22ikvIEtSnnO-6xkwY3rWI%22%7D)
+- **Link between `print_int` and `print_number`** : [flowchart link `print_int` `print_number`](https://app.diagrams.net/#HAkatsuki667%2Fholbertonschool-printf%2Fmain%2Flien%20entre%20print_int%20et%20print_number.drawio#%7B%22pageId%22%3A%22LP4LyfZthlp-OlyTYgBT%22%7D)
 
 ## Contributors
 This project was produced as part of the Holberton School program by :
