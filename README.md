@@ -16,6 +16,7 @@ Key features include support for :
 - **`print_func.c`** : Defines the functions associated with the various format specifiers (`%c`, `%s`, `%%`, `%d`, `%i`).
 - **`main.h`** : Contains function prototypes and definitions required for the project.
 - **`_putchar.c`** : Implements the `_putchar` function for displaying individual characters on standard output.
+-**`handle_percent.c`** : Checking if the characters following the percent is or isn't NULL.
 
 For a better understanding, we provide you with the flowchart section, which contains diagrams corresponding to each file.
 

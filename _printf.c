@@ -20,7 +20,7 @@ while (format[i] != '\0' && format != NULL) /* parcourir format index i */
 if (format[i] == '%')/* vérifier caractère spécial */
 {
 i = handle_percent(format, i, args);
-if (i == - 1)
+if (i == -1)
 return (-1);
 j = 0;
 while (types[j].type != NULL) /* parcourir types index j */
